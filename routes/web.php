@@ -13,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('home.main');
+});
+
+Route::get('/home',function(){
+    $partialName = 'home.main';
+    return view('indexAll',compact('partialName'));
 });
